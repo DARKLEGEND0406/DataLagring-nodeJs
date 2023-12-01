@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create</title>
+    <link rel="stylesheet" href="./css/create.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="./index.html">home</a>
+            </li>
+        </ul>
+    </nav>
+
+    <h1>Skapa användare</h1>
+    <form id="createUserForm">
+        <label for="firstName">Förnamn:</label>
+        <input type="text" id="firstName" name="firstName" required><br><br>
+
+        <label for="lastName">Efternamn:</label>
+        <input type="text" id="lastName" name="lastName" required><br><br>
+
+        <label for="username">Användarnamn:</label>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="birthday">Födelsedag:</label>
+        <input type="date" id="birthday" name="birthday" required><br><br>
+
+        <label for="image">Bild:</label>
+        <input type="file" id="image" name="image" accept="image/*" required><br><br>
+
+        <label for="occupation">Yrke:</label>
+        <input type="text" id="occupation" name="occupation" required><br><br>
+
+        <button type="submit">Skapa användare</button>
+    </form>
+
+    <div id="successMessage" style="display: none; color: green;">Användaren är skapad!</div>
+
+    <script>
+        const form = document.getElementById('createUserForm');
+        const successMessage = document.getElementById('successMessage');
+
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            const formData = new FormData(form);
+            const response = await fetch('/create-user', {
+                method: 'POST',
+                body: formData
+            });
+
+            if (response.ok) {
+                const newUser = await response.json(); // Ta emot den nya användaren från servern
+
+                // Visa meddelandet om användaren är skapad
+                successMessage.style.display = 'block';
+                // Dölj meddelandet efter 3 sekunder
+                setTimeout(() => {
+                    successMessage.style.display = 'none';
+                }, 3000);
+            } else {
+                console.error('Något gick fel!');
+            }
+        });
+    </script>
+    
+</body>
+</html>

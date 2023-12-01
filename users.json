@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "id": "1701257104254",
+      "firstName": "Adam",
+      "lastName": "Hammadi",
+      "username": "kaze",
+      "birthday": "2023-11-10",
+      "image": "1701257104249.jpeg",
+      "occupation": "student"
+    },
+    {
+      "id": "1701263303349",
+      "firstName": "gefsdf",
+      "lastName": "ds",
+      "username": "PROTEA",
+      "birthday": "2023-11-10",
+      "image": "1701263303346.jpeg",
+      "occupation": "nlib"
+    },
+    {
+      "id": "1701421283474",
+      "firstName": "Adam",
+      "lastName": "Hammadi",
+      "username": "admin",
+      "birthday": "2023-12-14",
+      "image": "1701421283470.jpeg",
+      "occupation": "student"
+    },
+    {
+      "id": "1701423021308",
+      "firstName": "lol",
+      "lastName": "Hammadi",
+      "username": "admin",
+      "birthday": "2023-12-09",
+      "image": "1701423021303.jpeg",
+      "occupation": "student"
+    }
+  ]
+}

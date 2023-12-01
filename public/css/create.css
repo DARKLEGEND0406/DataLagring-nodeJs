@@ -1,0 +1,62 @@
+body {
+    background-color: #f0f0f0;
+}
+
+nav {
+    background-color: #333;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+h1 {
+    color: blue;
+    text-align: center;
+}
+
+form {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 20px;
+}
+
+label {
+    display: inline-block;
+    font-weight: bold;
+    text-align: right;
+    width: 150px;
+}
+
+input {
+    border: 1px solid #ccc;
+    margin: 5px;
+}
+
+button {
+    background-color: green;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+}
+
+#successMessage {
+    text-align: center;
+}
